@@ -11,22 +11,39 @@
     <script src="https://kit.fontawesome.com/be4240e242.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main">
-        <div class="header">
-            <h2>To Do List</h2>
-        </div>
-        <div class="main-inner">
-            <div class="wrapper">
-                <input type="text" placeholder="Your Task..." autocomplete="off" class="input-field" id="task_input">
+    <div class="heading">
+      <div class="heading-inner">
+         <div class="mode-container">
+            <i class="fa-solid fa-sun sun-on" id="sun_icon"></i>
+            <i class="fa-solid fa-moon" id="moon_icon"></i>
+         </div>
+      </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="main">
+            <div class="header">
+                <h2 class="active-header" id="to_do_tab_heading">To Do List</h2>
+                <h2 class="non-active-header" id="done_tab_heading">Done</h2>
             </div>
-            <div class="wrapper wrapper-start">
-                <button class="add-btn" id="add_btn">Add</button>
-            </div>
-            <div class="wrapper wrapper-list">
-                <div class="inner-wrapper-list" id="wrapper_element">
-        
+            <div class="main-inner" id="main_tab">
+                <div class="wrapper">
+                    <input type="text" placeholder="Your Task..." autocomplete="off" class="input-field" id="task_input">
                 </div>
+                <div class="wrapper wrapper-start">
+                    <button class="add-btn" id="add_btn">Add</button>
+                </div>
+                <div class="wrapper wrapper-list">
+                    <div class="inner-wrapper-list" id="wrapper_element">
+            
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="done_tab" class="done-tab" style="display: none;">
+               <div id="done_wrapper" class="done-wrapper">
                 
+               </div>
+               <button id="clear_all_btn" class="add-btn clear-all">Clear All</button>
             </div>
         </div>
     </div>
